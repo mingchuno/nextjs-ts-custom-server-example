@@ -10,7 +10,7 @@
     "d": "ts-node --project tsconfig.server.json src/server/index.ts",
     "b:s": "tsc --project tsconfig.server.json",
     "b": "npm run build && npm run b:s",
-    "s": "NODE_ENV=production node dist/server/index.js"
+    "s": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
     "@types/node": "18.14.6",

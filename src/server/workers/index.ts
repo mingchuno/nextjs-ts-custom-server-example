@@ -1,4 +1,4 @@
-import { exampleCall } from '../../services/exampleService'
+import { exampleCall } from '../services/exampleService'
 
 export async function registerWorkers() {
   // TODO: start your cron job here!

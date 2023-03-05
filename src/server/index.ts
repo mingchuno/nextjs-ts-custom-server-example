@@ -15,7 +15,7 @@ const currentPort = parseInt(process.env.PORT || '3000', 10)
 const hostname = process.env.HOSTNAME || 'localhost'
 
 // when using middleware `hostname` and `port` must be provided below
-const app = next({ dev, hostname, port: currentPort })
+const app = next({ dev, hostname, port: currentPort, customServer: true })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
