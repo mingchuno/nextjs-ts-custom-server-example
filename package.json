@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "d": "ts-node --project tsconfig.server.json src/server/index.ts",
+    "b:s": "tsc --project tsconfig.server.json",
+    "b": "npm run build && npm run b:s",
+    "s": "NODE_ENV=production node dist/server/index.js"
   },
   "dependencies": {
     "@types/node": "18.14.6",
@@ -22,6 +26,8 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
   }
 }
