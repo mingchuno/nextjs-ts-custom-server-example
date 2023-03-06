@@ -23,8 +23,8 @@ FROM runtime AS runner
 
 WORKDIR /app
 
-COPY ./ ./
 COPY --from=builder /app/.next/ ./.next
+COPY --from=builder /app/.env /app/.env.* ./
 COPY --from=builder /app/dist ./
 
 ENV NODE_ENV=production
